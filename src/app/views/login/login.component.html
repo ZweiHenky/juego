@@ -1,0 +1,85 @@
+<body>
+    <div class="fondo-animado">
+        <span class="uno delay-1"></span>
+        <span class="dos delay-5"></span>
+        <span class="tres delay-3"></span>
+        <span class="cuatro delay-7"></span>
+
+        <span class="uno delay-6"></span>
+        <span class="dos delay-1"></span>
+        <span class="tres delay-5"></span>
+        <span class="cuatro delay-3"></span>
+        
+        <span class="uno delay-5"></span>
+        <span class="dos delay-4"></span>
+        <span class="tres delay-7"></span>
+        <span class="cuatro delay-6"></span>
+
+        <span class="uno delay-7"></span>
+        <span class="dos delay-2"></span>
+        <span class="tres delay-1"></span>
+        <span class="cuatro delay-5"></span>
+    </div>
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <h1>Crear Cuenta</h1>
+                <span>Usa una cuenta escolar</span>
+                <div class="form">
+                    <input type="text" name="Name" placeholder="" required class="mb-2">
+                    <label class="lbl">
+                        <span class="text">Nombre</span>
+                    </label>
+                </div>
+                <div class="form">
+                    <input type="email" name="email" placeholder="" required class="mb-2">
+                    <label class="lbl">
+                        <span class="text">Email</span>
+                    </label>
+                </div>
+                <div class="form">
+                    <input type="password" name="password" placeholder="" required class="mb-2">
+                    <label class="lbl">
+                        <span class="text" >Contraseña</span>
+                    </label>
+                </div> 
+                <input type="submit" value="Registrarse">
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="#">
+                <h1>Iniciar Sesion</h1>
+                <span>Ingresa con tu cuenta de email</span>
+                <div class="form">
+                    <input type="email" name="email" placeholder="" required class="mb-2">
+                    <label class="lbl">
+                        <span class="text">Email</span>
+                    </label>
+                </div>
+                <div class="form">
+                    <input type="password" name="password" placeholder="" required class="mb-2">
+                    <label class="lbl">
+                        <span class="text" >Contraseña</span>
+                    </label>
+                </div> 
+                <a href="#" class="form-text text-muted text-decoration-none">¿olvidaste tu contraseña?</a>
+                <input type="submit" value="Iniciar Sesion">
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Bienvenido De Regreso!</h1>
+                    <p>Para mantenerse conectado con nosotros, inicie sesión con su información personal</p>
+                    <button class="ghost" id="signIn">Iniciar Sesion</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Hola, Amigo!</h1>
+                    <p>Ingrese sus datos personales y comience su viaje con nosotros</p>
+                    <button class="ghost" id="signUp">Registrarse</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
