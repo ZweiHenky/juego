@@ -8,6 +8,9 @@ import { FooterComponent } from './templates/footer/footer.component';
 
 import { CargarScriptService } from './services/cargarScript/cargar-script.service';
 import { ScoreComponent } from './views/score/score.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+
 
 
 @NgModule({
@@ -20,7 +23,10 @@ import { ScoreComponent } from './views/score/score.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [
     CargarScriptService

@@ -47,17 +47,17 @@
             </form>
         </div>
         <div class="form-container sign-in-container">
-            <form action="#">
+            <form [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm.value)" action="#">
                 <h1>Iniciar Sesion</h1>
                 <span>Ingresa con tu cuenta de email</span>
                 <div class="form">
-                    <input type="email" name="email" placeholder="" required class="mb-2">
+                    <input type="email" formControlName="email" placeholder="" required class="mb-2">
                     <label class="lbl">
                         <span class="text">Email</span>
                     </label>
                 </div>
                 <div class="form">
-                    <input type="password" name="password" placeholder="" required class="mb-2">
+                    <input type="password" formControlName="password" placeholder="" required class="mb-2">
                     <label class="lbl">
                         <span class="text" >Contraseña</span>
                     </label>
