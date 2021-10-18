@@ -1,4 +1,7 @@
 export interface ResponseI{
-    refresh:string;
-    access:string;
+    token:string;
+    token_refresh:string;
+    user:string;
+    status:string;
+    error:any;
 }

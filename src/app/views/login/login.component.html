@@ -62,6 +62,9 @@
                         <span class="text" >Contraseña</span>
                     </label>
                 </div> 
+                <div class="alert alert-danger" *ngIf="errorStatus">
+                    {{errorMsj}}
+                </div>
                 <a href="#" class="form-text text-muted text-decoration-none">¿olvidaste tu contraseña?</a>
                 <input type="submit" value="Iniciar Sesion">
             </form>

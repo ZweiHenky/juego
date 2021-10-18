@@ -21,17 +21,30 @@ export class LoginComponent implements OnInit {
 
   constructor(private _CargaScripts:CargarScriptService, private api:ApiService, private router:Router) {
     _CargaScripts.Carga(["login"])
-   }
+  }
+
+  errorStatus:Boolean = false;
+  errorMsj:any = ""; 
 
   ngOnInit(): void {
+    this.checkLocalStorage();
+  }
+
+  checkLocalStorage(){
+    if (localStorage.getItem('token')) {
+      this.router.navigate(['index']);
+    }
   }
 
   onLogin(form:LoginI){
     this.api.loginByEmail(form).subscribe(data =>{
       let dataResponse:ResponseI = data;
-      if (dataResponse.access) {
-        localStorage.setItem("access", dataResponse.access);
+      if (dataResponse.status == 'ok') {
+        localStorage.setItem("token", dataResponse.token);
         this.router.navigate(['index']);
+      }else{
+        this.errorStatus=true;
+        this.errorMsj = dataResponse.error;
       }
     })
   }
