@@ -10,6 +10,7 @@ import { CargarScriptService } from './services/cargarScript/cargar-script.servi
 import { ScoreComponent } from './views/score/score.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { ProfileComponent } from './views/profile/profile.component';
 
 
 
@@ -19,7 +20,8 @@ import {HttpClientModule} from '@angular/common/http';
     HeaderComponent,
     FooterComponent,
     routingComponents,
-    ScoreComponent
+    ScoreComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

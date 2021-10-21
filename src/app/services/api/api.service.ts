@@ -17,5 +17,5 @@ export class ApiService {
     let direccion = this.url + "api/login";
     return this.http.post<ResponseI>(direccion, form); 
   }
-  
+
 }

@@ -21,6 +21,17 @@ body:before{
     opacity: 0.6;
 }
 
+.centrar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left; 
+    font-family: Arial; 
+    font-size: 65px; 
+    color: #ffffff; 
+    text-shadow: 5px 5px 15px #5c0404;
+}
+
 /* footer */
 
 footer{
@@ -75,3 +86,4 @@ footer{
     opacity: 0.4;
     font-weight: 400;
 }
+

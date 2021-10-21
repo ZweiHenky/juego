@@ -40,7 +40,7 @@ body:before{
     border-radius: 10px;
     overflow: hidden;
     height: inherit;
-    width: 300px;
+    width: 400px;
 }
 .btn:hover{
     color:black;
@@ -167,4 +167,18 @@ footer{
 .footer-bottom span{
     opacity: 0.4;
     font-weight: 400;
+}
+
+.centrar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+  background-size: 100%, 100%;
+  border-radius: 50%;
 }
