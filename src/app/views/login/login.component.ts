@@ -5,6 +5,7 @@ import { ApiService } from 'src/app/services/api/api.service';
 import { LoginI } from 'src/app/models/login.interface';
 import { Router } from '@angular/router';
 import {ResponseI} from  '../../models/response.interface';
+import { registerI } from 'src/app/models/register.interface';
 
 
 @Component({
@@ -17,6 +18,12 @@ export class LoginComponent implements OnInit {
   loginForm = new FormGroup({
     email : new FormControl('', Validators.required),
     password : new FormControl('', Validators.required) 
+  })
+
+  registerForm = new FormGroup({
+    email : new FormControl(''),
+    username : new FormControl(''),
+    password : new FormControl('')
   })
 
   constructor(private _CargaScripts:CargarScriptService, private api:ApiService, private router:Router) {
@@ -47,6 +54,12 @@ export class LoginComponent implements OnInit {
         this.errorMsj = dataResponse.error;
       }
     })
+  }
+
+  registerUser(form:registerI){
+      return this.api.registerNewUser(form).subscribe(data => {
+        console.log(data);
+      })
   }
 
 }

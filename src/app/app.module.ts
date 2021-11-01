@@ -9,8 +9,9 @@ import { FooterComponent } from './templates/footer/footer.component';
 import { CargarScriptService } from './services/cargarScript/cargar-script.service';
 import { ScoreComponent } from './views/score/score.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { ProfileComponent } from './views/profile/profile.component';
+import { AuthInterceptorService } from './services/api/auth-interceptor.service';
 
 
 
@@ -31,7 +32,12 @@ import { ProfileComponent } from './views/profile/profile.component';
     HttpClientModule
   ],
   providers: [
-    CargarScriptService
+    CargarScriptService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptorService,
+      multi: true
+    }
   ],
   bootstrap: [AppComponent]
 })

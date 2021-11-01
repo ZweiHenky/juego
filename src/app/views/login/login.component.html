@@ -22,28 +22,28 @@
     </div>
     <div class="container" id="container">
         <div class="form-container sign-up-container">
-            <form action="#">
+            <form action="#" [formGroup]="registerForm" (ngSubmit)="registerUser(registerForm.value)">
                 <h1>Crear Cuenta</h1>
                 <span>Usa una cuenta escolar</span>
                 <div class="form">
-                    <input type="text" name="Name" placeholder="" required class="mb-2">
+                    <input type="text" formControlName="username" placeholder="" required class="mb-2" >
                     <label class="lbl">
                         <span class="text">Nombre</span>
                     </label>
                 </div>
                 <div class="form">
-                    <input type="email" name="email" placeholder="" required class="mb-2">
+                    <input type="email" formControlName="email" placeholder="" required class="mb-2" >
                     <label class="lbl">
                         <span class="text">Email</span>
                     </label>
                 </div>
                 <div class="form">
-                    <input type="password" name="password" placeholder="" required class="mb-2">
+                    <input type="password" formControlName="password" placeholder="" required class="mb-2" >
                     <label class="lbl">
                         <span class="text" >Contraseña</span>
                     </label>
                 </div> 
-                <input type="submit" value="Registrarse">
+                <input type="submit" value="Registrarse" >
             </form>
         </div>
         <div class="form-container sign-in-container">
